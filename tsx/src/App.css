@@ -1,42 +1,55 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Neucha&family=Roboto&display=swap');
+
+* { 
+  padding: 0; 
+  margin: 0; 
+  box-sizing: border-box;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.app { 
+  width: 100vwv; 
+  height: 100vw; 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center;
+  background-color: #2f74c0; 
+  font-family: "Neucha", cursive; 
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.heading { 
+  text-transform: uppercase; 
+  font-size: 40px; 
+  margin: 30px 0; 
+  color: white;
+  z-index: 1;
+  text-align: center; 
+}
+
+.input { 
+  display: flex; 
+  width: 90%; 
+  position: relative; 
+  align-items: center; 
+}; 
+
+input { 
+  background-color: red;
+  width: 100%; 
+  border-radius: 50%; 
+  padding: 20px 30px; 
+  font-size: 25px;
+  border: none; 
+  transition: 0.2s; 
+  box-shadow: inset 0 0 5px black; 
+}
+
+
+.input__submit { 
+  background-color: red;
+}
+@media and (max-width: 800px) { 
+  .heading { 
+    margin: 15px 0; 
+    font-size: 35px; 
   }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }
