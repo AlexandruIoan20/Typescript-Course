@@ -1,36 +1,30 @@
 import './App.css'
 
-//Variables 
-let name:string = 'Alex'; 
-let age:number | string  = '2'; // ori number ori string 
-let isStudent:boolean;
-let hobbies: string[]; 
-let numbers: number[]; 
-let role: [number, string] //un array cu un numar si un string 
+interface Person { 
+  name: string, 
+  age?: number,
+}; 
 
-let person: Object; //merge dar nu e recomandat 
-
-type Person =  { 
-  name: string,
-  age?: number, //age with ? is an optional property 
+interface Guy extends Person { // extends interface Person
+                              // in loc de interfata person poate fi si un tip 
+  profession: string, 
 }
 
-let typedPerson: Person = { 
-  name: 'Hello World!', 
-  age: 12, 
-}
+type X = { 
+  a: string, 
+  b: number, 
+}; 
 
-let lotsOfPeople: Person[] //array cu persoane
+type Y = X & {  //extends X type + has some other variables
+                // in loc de X poate fi si o interfata - ex: type Y = Person & { c, d }
+  c: string, 
+  d: number, 
+}; 
 
-
-let printSomeName: Function // not recommanded
-let printName: (name: string) => never //ce e dupa => = tipul variabilei returnate
-
-//never === returns nothing 
-//void === returns undeined  printName: (name: string) => void 
-
-let something: any // orice tip (nu recomandat)
-let personName: unknown; // recomdandat cand poate lua orice tip
+//let y: Y = { 
+ // c: 'efdats', 
+ // d: 43
+//}
 
 
 const App = () => { 
